@@ -6,12 +6,15 @@ var path = require("path");
 
 //configuring basic express server
 var app = express();
-//Serring an initial port
 var PORT = process.env.PORT || 8080;
 
-//Setting up express to handle data parsing
-app.use(bodyParser.urlencoded({extended:false}));
+//Exposing public directory to server
+app.use(express.static(path.join(__dirname, "./app/public")))
+
+//middleware to handle data parsing of incoming requests
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+app.use(bodyParser.text());
 
 
 //Requiring Routes: will guide express server to 
@@ -19,8 +22,8 @@ app.use(bodyParser.json());
 //are visited
 
 //note: export files before adding lines 22 and 23
-require("./app/routing/apiRoutes.js")(app);
-require("./app/routing/htmlRoutes.js")(app);
+require(path.join(__dirname, "./app/routing/apiRoutes.js"))(app);
+require(path.join(__dirname, "./app/routing/htmlRoutes.js"))(app);
 
 //starting express server
 app.listen(PORT, function(){
