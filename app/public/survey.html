@@ -10,55 +10,183 @@
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;amp;subset=cyrillic" rel="stylesheet">
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  
-  
-    <div class="container">
-        <form class="well" >
-        <p></p>
-        <div>
-          <a class="btn btn-primary" href="home.html" role="button">Back to homepage</a>
-        </div>
-            <label id="scheduleDetails"><h3>Survey Questions</h3></label>
-          <div class="form-group">
-          <label for="exampleInput">Your mind is always buzzing with unexplored ideas and plans.</label>
-            <input type="text" class="form-control data" 
-            id="trainName" aria-describedby="" placeholder="">
-            <small id="" class="form-text text-muted"></small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInput">Destination</label>
-            <input type="text" class="form-control data" 
-            id="destination" aria-describedby="" placeholder="">
-            <small id="" class="form-text text-muted"></small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInput">Frequency (In Minutes)</label>
-            <input type="number" name="quantity" min="1" max="1440" class="form-control data" 
-            id="frequency" aria-describedby="" placeholder="">
-            <small id="" class="form-text text-muted"></small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInput">First Train Time (hh:mm am-pm)</label>
-            <input type="time" class="form-control data" 
-            id="firstTrainTime" aria-describedby="" placeholder="">
-            <small id="" class="form-text text-muted"></small>
-          </div>
-          
-
-          
-          <button id="submit" class="btn btn-primary">Submit</button>
-          <input class="btn btn-secondary" type="reset" value="Reset">
-          
-        </form>
-
-
+  <div class="container">
+    <div class="form-group">
+      <h3>Survey Questions</h3>
     </div>
+    <hr>
+    <form>
+      <div class="form-group">
+        <h3>About You</h3>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Name(Required)</label>
+        <input type="text" class="form-control" id="name" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Link to Photo Image(Required)</label>
+        <input type="" class="form-control" id="picture" placeholder="">
+      </div>
+      <hr>
+      <div class="form-group">
+        <h4>Question 1</h4>
+        <label for="q1">
+        <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
+        </label>
+        <select class="form-control" id="q1">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="q2">
+        <h4>Question 2</h4>
+        <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
+        </label>
+        <select class="form-control" id="q2">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+        <div class="form-group">
+        <label for="q3">
+        <h4>Question 3</h4>
+        <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
+        </label>
+        <select class="form-control" id="q3">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="q4">
+        <h4>Question 4</h4>
+        <h5>You rarely do something just out of sheer curiosity.</h5>
+        </label>
+        <select class="form-control" id="q4">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="q5">
+        <h4>Question 5</h4>
+        <h5>People can rarely upset you.</h5>
+        </label>
+        <select class="form-control" id="q5">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="q6">
+        <h4>Question 6</h4>
+        <h5>It is often difficult for you to relate to other people’s feelings.</h5>
+        </label>
+        <select class="form-control" id="q6">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="q7">
+        <h4>Question 7</h4>
+        <h5>In a discussion, truth should be more important than people’s sensitivities.</h5>
+        </label>
+        <select class="form-control" id="q7">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="q8">
+        <h4>Question 8</h4>
+        <h5>You rarely get carried away by fantasies and ideas.</h5>
+        </label>
+        <select class="form-control" id="q8">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+       <label for="q5">
+        <h4>Question 9</h4>
+        <h5>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h5>
+        </label>
+        <select class="form-control" id="q9">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="q10">
+        <h4>Question 10</h4>
+        <h5>You feel more energetic after spending time with a group of people.</h5>
+        </label>
+        <select class="form-control" id="q10">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+  </form>
+</div>
+
 </body>
 
 </html>
